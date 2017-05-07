@@ -1,0 +1,28 @@
+{
+  "name": "react-native-manipulate-call-log",
+  "version": "0.0.1",
+  "description": "Android's Native call logs manipulator in React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:himelbrand/react-native-manipulate-call-log.git"
+  },
+  "keywords": [
+    "React",
+    "Native",
+    "Logs",
+    "Call",
+    "Android",
+    "react-component",
+    "react-native"
+  ],
+  "author": "Himelbrand",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/himelbrand/react-native-manipulate-call-log/issues"
+  },
+  "homepage": "https://github.com/himelbrand/react-native-manipulate-call-log#readme"
+}
