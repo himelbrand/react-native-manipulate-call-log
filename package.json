@@ -1,6 +1,6 @@
 {
   "name": "react-native-manipulate-call-log",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Android's Native call logs manipulator in React Native",
   "main": "index.js",
   "scripts": {
