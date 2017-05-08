@@ -68,16 +68,20 @@ import CallLogs from 'react-native-manipulate-call-log'
 ```
 
 #### Add call log at current time 
-
+##### Duration is given in seconds (second param)
 ```javascript
-CallLogs.addIncomingCallLog('123456789',30)//adds an incoming call log, at:now from:123456789 duration:30sec
+CallLogs.addIncomingCallLog('123456789', 30)//adds an incoming call log, at:now from:123456789 duration:30sec
+CallLogs.addOutgoingCallLog('123456789', 30)//adds an outgoing call log, at:now to:123456789 duration:30sec
 CallLogs.addMissedCallLog('123456789')//adds an missed call log, at:now from:123456789
 ```
 
 #### Add call log at specific time 
+##### Duration is given in seconds (second param)
+##### Time of call is given in Milliseconds (third param)
 
 ```javascript
-CallLogs.addIncomingCallLogAt('123456789',30,1493752942000)//adds an incoming call log, at:05/02/2017-22:22:22 from:123456789 duration:30sec
-CallLogs.addMissedCallLogAt('123456789',1493752942000)//adds an missed call log, at:05/02/2017-22:22:22 from:123456789
+CallLogs.addIncomingCallLogAt('123456789', 30, 1493752942000)//adds an incoming call log, at:05/02/2017-22:22:22 from:123456789 duration:30sec
+CallLogs.addOutgoingCallLogAt('123456789', 30, 1493752942000)//adds an outgoing call log, at:now to:123456789 duration:30sec
+CallLogs.addMissedCallLogAt('123456789', 1493752942000)//adds an missed call log, at:05/02/2017-22:22:22 from:123456789
 ```
 

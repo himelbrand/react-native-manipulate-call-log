@@ -61,7 +61,34 @@ public class RNManipulateCallLogModule extends ReactContextBaseJavaModule {
        reactContext.getApplicationContext().getContentResolver().insert(CallLog.Calls.CONTENT_URI, values);
     }
   }
-
+  @ReactMethod
+  public void addOutgoingCallLog(String phone,int duration) {
+   if (ActivityCompat.checkSelfPermission(getCurrentActivity(), Manifest.permission.WRITE_CALL_LOG) != PackageManager.PERMISSION_GRANTED)
+        ActivityCompat.requestPermissions(getCurrentActivity(), new String[]{Manifest.permission.WRITE_CALL_LOG}, 101);
+   else{
+       ContentValues values = new ContentValues();
+       values.put(CallLog.Calls.CACHED_NUMBER_TYPE, 0);
+       values.put(CallLog.Calls.TYPE, Calls.OUTGOING_TYPE);
+       values.put(CallLog.Calls.DATE, System.currentTimeMillis());
+       values.put(CallLog.Calls.DURATION, duration);
+       values.put(CallLog.Calls.NUMBER, phone);
+       reactContext.getApplicationContext().getContentResolver().insert(CallLog.Calls.CONTENT_URI, values);
+    }
+  }
+  @ReactMethod
+  public void addOutgoingCallLogAt(String phone,int duration,double timeInMillis) {
+   if (ActivityCompat.checkSelfPermission(getCurrentActivity(), Manifest.permission.WRITE_CALL_LOG) != PackageManager.PERMISSION_GRANTED)
+        ActivityCompat.requestPermissions(getCurrentActivity(), new String[]{Manifest.permission.WRITE_CALL_LOG}, 101);
+   else{
+       ContentValues values = new ContentValues();
+       values.put(CallLog.Calls.CACHED_NUMBER_TYPE, 0);
+       values.put(CallLog.Calls.TYPE, Calls.OUTGOING_TYPE);
+       values.put(CallLog.Calls.DATE, timeInMillis);
+       values.put(CallLog.Calls.DURATION, duration);
+       values.put(CallLog.Calls.NUMBER, phone);
+       reactContext.getApplicationContext().getContentResolver().insert(CallLog.Calls.CONTENT_URI, values);
+    }
+  }
   @ReactMethod
   public void addMissedCallLog(String phone) {
     if (ActivityCompat.checkSelfPermission(getCurrentActivity(), Manifest.permission.WRITE_CALL_LOG) != PackageManager.PERMISSION_GRANTED)
