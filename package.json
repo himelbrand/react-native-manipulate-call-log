@@ -1,6 +1,6 @@
 {
   "name": "react-native-manipulate-call-log",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Android's Native call logs manipulator in React Native",
   "main": "index.js",
   "scripts": {
@@ -20,7 +20,7 @@
     "react-native"
   ],
   "author": "Himelbrand",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/himelbrand/react-native-manipulate-call-log/issues"
   },
