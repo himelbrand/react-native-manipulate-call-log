@@ -6,6 +6,7 @@ Android's Native call logs manipulator in React Native
 ```bash
 npm install react-native-manipulate-call-log --save
 ```
+npm page - https://www.npmjs.com/package/react-native-manipulate-call-log
 ## Add permissions
 * In `AndroidManifest.xml` add:
 ```xml
